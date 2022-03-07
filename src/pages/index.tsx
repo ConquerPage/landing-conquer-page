@@ -1,12 +1,12 @@
 import { SectionHome } from "../components/SectionHome";
-import SectionTwo from "../components/SectionTwo";
+import SectionHowItWorks from "../components/SectionHowItWorks";
 
 export default function Home() {
   return (
     <>
       <main>
         <SectionHome />
-        <SectionTwo />
+        <SectionHowItWorks />
       </main>
     </>
 
