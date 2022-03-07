@@ -21,7 +21,7 @@ export function SectionHome() {
             <a>
               <span id="first-text-button">QUERO MELHORAR MINHAS VENDAS</span>
               <span id="second-text-button">
-                COMECE <span>GRÁTIS</span>
+                COMECE GRÁTIS
               </span>
             </a>
           </Link>
