@@ -7,16 +7,25 @@ export const allColors = {
   color5: '#33363B',
   color6: '#282A2F',
   color7: '#212227',
+  color8: '#00BDC2',
+  color9: '#fff',
+  color10: '#000',
 };
 
 export const lightTheme = {
   value: 'light',
   body: allColors.color0,
   switchToggle: allColors.color5,
+  backgroundLinear: allColors.color2,
+  secondBackgroundLinear: allColors.color8,
+  backgroundButton: allColors.color5,
 };
 
 export const darkTheme = {
   value: 'dark',
   body: allColors.color4,
   switchToggle: allColors.color0,
+  backgroundLinear: allColors.color4,
+  secondBackgroundLinear: allColors.color10,
+  backgroundButton: allColors.color3,
 };
