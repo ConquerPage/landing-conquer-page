@@ -4,7 +4,11 @@ import styled from 'styled-components';
 export const SectionContainer = styled.section`
   background-color: ${({ theme }) => theme.backgroundWhyConquerPage};
 
-  padding: 4rem 1rem;
+  padding: 2.5rem 1rem;
+
+  @media (min-width: 768px) {
+    padding: 6.25rem 1rem;
+  }
 `;
 
 export const ContentAni = styled(motion.div)`
