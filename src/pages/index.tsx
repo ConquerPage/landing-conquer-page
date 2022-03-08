@@ -1,6 +1,8 @@
+//Components
+import { SectionHome } from '../components/SectionHome';
+import SectionTwo from '../components/SectionTwo';
+import { SectionWhyConquerPage } from '../components/SectionWhyConquerPage';
 import { SectionDepositions } from "../components/SectionDepositions";
-import { SectionHome } from "../components/SectionHome";
-import SectionTwo from "../components/SectionTwo";
 
 export default function Home() {
   return (
@@ -8,9 +10,9 @@ export default function Home() {
       <main>
         <SectionHome />
         <SectionTwo />
+        <SectionWhyConquerPage />
         <SectionDepositions />
       </main>
     </>
-
   );
 }

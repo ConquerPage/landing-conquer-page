@@ -17,19 +17,25 @@ export const allColors = {
 export const lightTheme = {
   value: 'light',
   body: allColors.color0,
+  text: allColors.color7,
   switchToggle: allColors.color5,
   backgroundLinear: allColors.color2,
   secondBackgroundLinear: allColors.color8,
   backgroundButton: allColors.color5,
   colorText: allColors.color7,
+  backgroundWhyConquerPage: allColors.color1,
+  borderLine: allColors.color2,
 };
 
 export const darkTheme = {
   value: 'dark',
   body: allColors.color4,
+  text: allColors.color0,
   switchToggle: allColors.color0,
   backgroundLinear: allColors.color4,
   secondBackgroundLinear: allColors.color10,
   backgroundButton: allColors.color3,
   colorText: allColors.color11,
+  backgroundWhyConquerPage: allColors.color5,
+  borderLine: allColors.color3,
 };
