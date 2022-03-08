@@ -1,3 +1,4 @@
+import { SectionDepositions } from "../components/SectionDepositions";
 import { SectionHome } from "../components/SectionHome";
 import SectionTwo from "../components/SectionTwo";
 
@@ -7,6 +8,7 @@ export default function Home() {
       <main>
         <SectionHome />
         <SectionTwo />
+        <SectionDepositions />
       </main>
     </>
 

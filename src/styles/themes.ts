@@ -11,6 +11,7 @@ export const allColors = {
   color8: '#00BDC2',
   color9: '#fff',
   color10: '#000',
+  color11: '#ECECED',
 };
 
 export const lightTheme = {
@@ -20,6 +21,7 @@ export const lightTheme = {
   backgroundLinear: allColors.color2,
   secondBackgroundLinear: allColors.color8,
   backgroundButton: allColors.color5,
+  colorText: allColors.color7,
 };
 
 export const darkTheme = {
@@ -29,4 +31,5 @@ export const darkTheme = {
   backgroundLinear: allColors.color4,
   secondBackgroundLinear: allColors.color10,
   backgroundButton: allColors.color3,
+  colorText: allColors.color11,
 };
