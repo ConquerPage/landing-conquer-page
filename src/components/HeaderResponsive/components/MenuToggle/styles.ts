@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { allColors } from '../../../../styles/themes';
 
 export const ButtonMenuAni = styled(motion.button)`
   display: flex;
@@ -15,7 +16,7 @@ export const ButtonMenuAni = styled(motion.button)`
 
   > svg {
     > path {
-      stroke: ${({ theme }) => theme.text};
+      stroke: ${allColors.color0};
     }
   }
 `;
