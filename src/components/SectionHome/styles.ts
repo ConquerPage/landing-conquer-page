@@ -9,9 +9,14 @@ export const SectionContainer = styled.section`
   position: relative;
   background: ${({ theme }) =>
     `linear-gradient(118.9deg, ${theme.backgroundLinear} 42.38%, ${theme.secondBackgroundLinear} 99.99%, rgba(174, 141, 138, 0) 100%);`};
-  /* background: ${({ theme }) =>
-    `linear-gradient(101.44deg, ${theme.background} 0%, rgba(0, 189, 194, 0) 185.46%);`}; */
-  padding: 9.5rem 1rem;
+  background: ${({ theme }) =>
+    `linear-gradient(101.45deg, ${theme.backgroundLinear} 0%, ${theme.secondBackgroundLinear} 177.62%);`};
+  /* padding: 9.5rem 1rem; */
+  padding: 7rem 1rem 9.5rem 1rem;
+  
+  @media (min-width: 768px) {
+    padding: 9.5rem 1rem;
+  }
 `;
 
 export const ContentAni = styled.div`
@@ -20,7 +25,6 @@ export const ContentAni = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   position: relative;
 
   @media (min-width: 992px) {
@@ -33,8 +37,12 @@ export const ContentLeftAni = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  /* align-items: center; */
+  align-items: center;
   margin-bottom: 0.8rem;
+
+  @media (min-width: 768px) {
+    align-items: start;
+  }
 
   h1 {
     /* color: ${({ theme }) => `${theme.text}`}; */
@@ -63,13 +71,17 @@ export const ContentLeftAni = styled.div`
     border-radius: 10px;
     cursor: pointer;
     position: absolute;
-    bottom: -65px;
+    bottom: -70px;
 
     padding: 0.5rem 1.8125rem;
 
     background: ${allColors.color3};
     /* background: ${({ theme }) => `${theme.text}`}; */
     font-weight: 700;
+
+    @media (min-width: 768px) {
+      bottom: 0;
+    }
 
     #first-text-button,
     #second-text-button,
@@ -78,10 +90,10 @@ export const ContentLeftAni = styled.div`
     }
 
     #first-text-button {
-      color: ${({ theme }) => `${theme.body}`};
+      color: ${allColors.color9};
     }
     #second-text-button {
-      color: ${({ theme }) => `${theme.body}`};
+      color: ${allColors.color9};
     }
     #second-text-button-color {
       color: ${allColors.color2};
