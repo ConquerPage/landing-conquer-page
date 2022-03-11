@@ -21,6 +21,7 @@ export const lightTheme = {
   backgroundLinear: allColors.color2,
   secondBackgroundLinear: allColors.color8,
   backgroundButton: allColors.color5,
+  borderBottom: allColors.color2,
   backgroundWhyConquerPage: allColors.color1,
   borderLine: allColors.color2,
 };
@@ -33,6 +34,7 @@ export const darkTheme = {
   backgroundLinear: allColors.color4,
   secondBackgroundLinear: allColors.color10,
   backgroundButton: allColors.color3,
+  borderBottom: allColors.color3,
   backgroundWhyConquerPage: allColors.color5,
   borderLine: allColors.color3,
 };

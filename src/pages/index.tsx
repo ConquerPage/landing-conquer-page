@@ -1,6 +1,6 @@
+import { SectionHome } from "../components/SectionHome";
+import SectionHowItWorks from "../components/SectionHowItWorks";
 //Components
-import { SectionHome } from '../components/SectionHome';
-import SectionTwo from '../components/SectionTwo';
 import { SectionWhyConquerPage } from '../components/SectionWhyConquerPage';
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <main>
         <SectionHome />
-        <SectionTwo />
+        <SectionHowItWorks />
         <SectionWhyConquerPage />
       </main>
     </>
