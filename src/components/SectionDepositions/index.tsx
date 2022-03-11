@@ -1,4 +1,5 @@
 import { useMediaQuery } from '../../hooks/useMediaQuery';
+import { Title } from '../Title';
 import { CardDesktop } from './components/CardDesktop';
 import { CardResponsive } from './components/CardResponsive';
 
@@ -34,32 +35,20 @@ export function SectionDepositions() {
         variants={contentVariants}
       >
         <div className="section__headline">
-          <h2>
-            Veja o que estão falando!
-          </h2>
-          {/* <h2>
-            “Fiz em 30 minutos uma página que eu pagava caro pra outros fazerem
-            por mim...”
-          </h2> */}
-          {/* {isDesktop && (
-            <> */}
-              <p>
-                <strong>
-                  “Fiz em 30 minutos uma página que eu pagava caro pra outros fazerem
-                  por mim...”
-                </strong>
-              </p>
-              <p>
-                Faça como eles e{' '}
-                <strong>
-                  transforme de vez os resultados das suas campanhas
-                </strong>
-                , chega de pagar absurdos para ter uma página online, com a{' '}
-                <strong>ConquerPage</strong> você pode ter isso em mãos com alguns
-                cliques de forma <strong>rápida, prática e divertida</strong>.
-              </p>
-            {/* </>
-          )} */}
+          <Title value="Veja o que estão falando!" />
+          <p>
+            <strong>
+              “Fiz em 30 minutos uma página que eu pagava caro pra outros
+              fazerem por mim...”
+            </strong>
+          </p>
+          <p>
+            Faça como eles e{' '}
+            <strong>transforme de vez os resultados das suas campanhas</strong>,
+            chega de pagar absurdos para ter uma página online, com a{' '}
+            <strong>ConquerPage</strong> você pode ter isso em mãos com alguns
+            cliques de forma <strong>rápida, prática e divertida</strong>.
+          </p>
         </div>
 
         {isDesktop ? <CardDesktop /> : <CardResponsive />}

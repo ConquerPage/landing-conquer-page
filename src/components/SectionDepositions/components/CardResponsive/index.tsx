@@ -9,7 +9,13 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 //Styles
-import { ContentResponsive, CardAni, CardBottom, ArrowCard, SliderPoints } from './styles';
+import {
+  ContentResponsive,
+  CardAni,
+  ArrowCard,
+  SliderPoints,
+  Point,
+} from './styles';
 import { AnimatePresence } from 'framer-motion';
 
 export function CardResponsive() {
@@ -40,6 +46,13 @@ export function CardResponsive() {
         profession: 'Corretor de Imóveis',
         testimonial:
           'Sempre tive problema em entender o que é domínio, hospedagem, código de programação, e já trabalho com digital a alguns anos, e agora conheci a ConquerPage, onde eu só preciso pegar designs prontos e customizar com a minha identidade visual, e fazer meus textos. Parabéns pelo trabalho incrível!!',
+        avatar: '/images/avatar3.svg',
+      },
+      {
+        name: 'Alberto Rodrigues',
+        profession: 'Designer Gráfico',
+        testimonial:
+          'Comecei a ter muita demanda para criação de landing pages, e era bem dificil conciliar as coisas, porque outras ferramentas me consumiam muito tempo, um amigo me indicou e comecei a utilizar a ConquerPage, hoje consigo entregar a mesma qualidade de páginas, porém com muito mais facilidade em bem menos tempo.',
         avatar: '/images/avatar4.svg',
       },
     ],
@@ -124,23 +137,40 @@ export function CardResponsive() {
             }
           }}
         >
-          <Image
-            src={cardsContent[currentPage].avatar}
-            width={120}
-            height={120}
-            layout="intrinsic"
-            alt={cardsContent[currentPage].title}
-          />
+          <div className="card__wrapper">
+            <div className="card__user">
+              <div
+                className="card__avatar"
+                style={{ width: '80px', height: '80px' }}
+              >
+                <Image
+                  src={cardsContent[currentPage].avatar}
+                  layout="fixed"
+                  width={80}
+                  height={80}
+                  alt={cardsContent[currentPage].name}
+                />
+              </div>
 
-          <h3>{cardsContent[currentPage].title}</h3>
-          <p>{cardsContent[currentPage].description}</p>
+              <div className="card__name">
+                <h3>{cardsContent[currentPage].name}</h3>
+                <span>{cardsContent[currentPage].profession}</span>
+              </div>
+            </div>
+
+            <div className="line__ghost" />
+
+            <div className="card__deposition">
+              <p>{cardsContent[currentPage].testimonial}</p>
+            </div>
+          </div>
 
           <SliderPoints>
             {cardsContent.map((c, ind) => (
-              <Point key={c.title} currentCard={currentPage === ind} />
+              <Point key={c.name} currentCard={currentPage === ind} />
             ))}
           </SliderPoints>
-        </CardAni>
+        </CardAni> 
       </AnimatePresence>
 
       {currentPage !== 0 && (

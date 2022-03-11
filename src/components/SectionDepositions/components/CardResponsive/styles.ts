@@ -1,12 +1,17 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 import { allColors } from '../../../../styles/themes';
+
+interface IPointProps {
+  currentCard: string;
+}
 
 export const ContentResponsive = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  position: relative;
 `;
 
 export const CardAni = styled(motion.div)`
@@ -14,70 +19,69 @@ export const CardAni = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   position: relative;
-  height: 380px;
+  height: 390px;
+  padding: 0.75rem 1.5rem;
 
-  box-shadow: 0px 3.57047px 3.57047px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 15px -6px ${allColors.color7};
   border-radius: 14px;
-  background-color: ${({ theme }) => `${theme.cardsBackground}`};
+  background-color: ${({ theme }) => `${theme.backgroundCardDepositions}`};
+  box-sizing: border-box;
 
-  div.card__iconDepositions {
-    position: absolute;
-    top: 10px;
-    left: 8px;
-  }
-
-  > div.card__testimonioal {
-    width: 100%;
-    height: 100%;
+  > div.card__wrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding: 0 0.625rem;
-    /* padding: 3rem 0.75rem 0.75rem 0.75rem; */
-    > p {
-      text-align: center;
-      font-size: 1rem;
-      color: ${allColors.color8};
+    height: 95%;
+    gap: 5%;
+
+    > div.line__ghost {
+      height: 0.3rem;
+      width: 85%;
+      background-color: ${({ theme }) => theme.borderLine};
+    }
+
+    > div.card__user {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      width: 100%;
+
+      .card__name {
+        margin-left: 0.938rem;
+
+        > h3 {
+          font-size: var(--font-lg);
+          color: ${({ theme }) => `${theme.text}`};
+        }
+        
+        > span {
+          font-size: var(--font-xs);
+          color: ${({ theme }) => `${theme.text}`};
+        }
+      }
+    }
+
+    > div.card__deposition {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+
+      > p {
+        font-size: var(--font-sm);
+        color: ${({ theme }) => `${theme.text}`};
+        margin: 0;
+      }
     }
   }
+
 
   &:last-child {
     margin-bottom: 4rem;
   }
 
   @media (min-width: 576px) {
-    flex: 0 1 310px;
-  }
-`;
-
-export const CardBottom = styled.div`
-  display: flex;
-  align-items: center;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  padding: 5px;
-
-  background: ${allColors.color5};
-  width: 100%;
-  height: 30%;
-
-  div.card__name {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin-left: 8px;
-
-    h4 {
-      color: ${allColors.color0};
-      font-size: var(--font-md);
-    }
-
-    span {
-      font-size: var(--font-xxs);
-      color: ${allColors.color0};
-    }
+    height: 300px;
   }
 `;
 
@@ -93,7 +97,7 @@ export const ArrowCard = styled.button`
   top: 50%;
   transform: translateY(-50%);
 
-  background-color: ${({ theme }) => theme.backgroundButton};
+  background-color: ${({ theme }) => theme.backgroundArrowButton};
 
   border-radius: 50%;
 
@@ -119,6 +123,19 @@ export const SliderPoints = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  height: 5%;
   gap: 2px;
+`;
+
+export const Point = styled.div<IPointProps>`
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1px solid ${allColors.color6};
+
+  ${(props) =>
+    props.currentCard &&
+    css`
+      background-color: ${allColors.color6};
+    `}
 `;
