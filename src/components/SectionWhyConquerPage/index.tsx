@@ -1,7 +1,12 @@
 import Image from 'next/image';
 import { useMemo } from 'react';
 import { Title } from '../Title';
-import { SectionContainer, Content, ImageContainer } from './styles';
+import {
+  SectionContainer,
+  ContentAni,
+  ItemContentAni,
+  ImageContainer,
+} from './styles';
 
 export function SectionWhyConquerPage() {
   const content = useMemo(() => {
@@ -37,12 +42,49 @@ export function SectionWhyConquerPage() {
     ];
   }, []);
 
+  const contentVariants = {
+    hidden: {
+      opacity: 0,
+      transition: {
+        duration: 0.2,
+      },
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.9,
+        staggerChildren: 0.4,
+        delayChildren: 0.5,
+      },
+    },
+  };
+
   return (
     <SectionContainer>
       <Title value="Porque a ConquerPage ?" />
-      <Content>
-        {content.map((item) => (
-          <div key={item.id}>
+      <ContentAni
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={contentVariants}
+      >
+        {content.map((item, index) => (
+          <ItemContentAni
+            key={item.id}
+            variants={{
+              visible: {
+                x: 0,
+                transition: {
+                  type: 'spring',
+                  duration: 1,
+                  bounce: 0.2,
+                },
+              },
+              hidden: {
+                x: index === 1 ? '200%' : '-200%',
+              },
+            }}
+          >
             <ImageContainer style={{ display: 'block', position: 'relative' }}>
               <Image
                 src={item.imageUrl}
@@ -52,11 +94,13 @@ export function SectionWhyConquerPage() {
                 priority
               />
             </ImageContainer>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-          </div>
+            <div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </div>
+          </ItemContentAni>
         ))}
-      </Content>
+      </ContentAni>
     </SectionContainer>
   );
 }
