@@ -4,8 +4,15 @@ import Image from 'next/image';
 import imageSectionHowItWorks from '../../../public/images/imageSectionHowItWorks.svg';
 import { Title } from '../Title';
 
-
-import { Section, ContentTitle, Content, ContentParagraph, TitleParagraph, Paragraph, ImageContainer } from './styles';
+import {
+  Section,
+  ContentTitle,
+  Content,
+  ContentParagraph,
+  TitleParagraph,
+  Paragraph,
+  ImageContainer
+} from './styles';
 
 export function SectionHowItWorks() {
   return (
