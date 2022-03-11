@@ -1,5 +1,5 @@
 export const allColors = {
-  color0: 'rgba(255,255,255,0.9)',
+  color0: '#ECECED',
   color1: '#F5F5F5',
   color2: '#006DBA',
   // color3: '#EC773D',
@@ -24,6 +24,8 @@ export const lightTheme = {
   borderBottom: allColors.color2,
   backgroundWhyConquerPage: allColors.color1,
   borderLine: allColors.color2,
+  backgroundCardDepositions: allColors.color9,
+  backgroundArrowButton: allColors.color7,
 };
 
 export const darkTheme = {
@@ -37,4 +39,6 @@ export const darkTheme = {
   borderBottom: allColors.color3,
   backgroundWhyConquerPage: allColors.color5,
   borderLine: allColors.color3,
+  backgroundCardDepositions: allColors.color7,
+  backgroundArrowButton: allColors.color0,
 };
