@@ -3,16 +3,8 @@ import { motion } from 'framer-motion';
 
 export const SectionContainer = styled.section`
   width: 100%;
-  background-color: ${({ theme }) => `${theme.background}`};
+  background-color: ${({ theme }) => `${theme.body}`};
   overflow-x: hidden;
-
-  background-image: ${({ theme }) =>
-    theme.value === 'light'
-      ? "url('/images/imageWaveBottomLight.svg')"
-      : " url('/images/imageWaveBottomDark.svg')"};
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 0% 100%;
 
   padding: 2.5rem 1rem;
 
