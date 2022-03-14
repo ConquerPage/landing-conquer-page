@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import { allColors } from '../../../../styles/themes';
 
 export const SectionContainerAni = styled(motion.section)`
   width: 100%;
@@ -25,7 +24,7 @@ export const ContentText = styled.div`
 
   margin-top: 1.875rem;
 
-  color: ${allColors.color7};
+  color: ${({ theme }) => theme.text};
 
   p {
     font-size: var(--font-sm);

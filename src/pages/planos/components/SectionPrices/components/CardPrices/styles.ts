@@ -102,7 +102,6 @@ export const CardContentAni = styled(motion.div)`
 export const OriginalPrice = styled.h3`
   margin-top: 1.75rem;
   color: ${allColors.color3};
-  text-shadow: 0px 3.4416px 3.4416px rgba(0, 0, 0, 0.25);
 
   font-size: var(--font-lg);
   > span {

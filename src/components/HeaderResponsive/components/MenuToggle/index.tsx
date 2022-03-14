@@ -26,6 +26,7 @@ export function MenuToggle({ handleShowMenu, showMenu }: IHeaderProps) {
       initial="closed"
       animate={showMenu ? 'open' : 'closed'}
       onClick={handleShowMenu}
+      aria-label="menu"
     >
       <svg width="23" height="23" viewBox="0 0 23 23">
         <Path
