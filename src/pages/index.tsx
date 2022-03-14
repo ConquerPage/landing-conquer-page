@@ -1,15 +1,17 @@
 //Components
 import { SectionHome } from '../components/SectionHome';
-import SectionTwo from '../components/SectionTwo';
+import { SectionHowItWorks } from '../components/SectionHowItWorks';
 import { SectionWhyConquerPage } from '../components/SectionWhyConquerPage';
+import { SectionDepositions } from '../components/SectionDepositions';
 
 export default function Home() {
   return (
     <>
       <main>
         <SectionHome />
-        <SectionTwo />
+        <SectionHowItWorks />
         <SectionWhyConquerPage />
+        <SectionDepositions />
       </main>
     </>
   );

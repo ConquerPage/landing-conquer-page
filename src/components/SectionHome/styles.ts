@@ -10,7 +10,6 @@ export const SectionContainer = styled.section`
 
   background: ${({ theme }) =>
     `linear-gradient(101.45deg, ${theme.backgroundLinear} 0%, ${theme.secondBackgroundLinear} 177.62%);`};
-  /* padding: 9.5rem 1rem; */
   padding: 7rem 1rem 9.5rem 1rem;
 
   @media (min-width: 768px) {
@@ -32,6 +31,7 @@ export const ContentAni = styled.div`
     gap: 1.875rem;
   }
 `;
+
 export const ContentLeftAni = styled.div`
   display: flex;
   flex-direction: column;
@@ -39,19 +39,17 @@ export const ContentLeftAni = styled.div`
   align-items: center;
   margin-bottom: 0.8rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     align-items: start;
   }
 
   h1 {
-    /* color: ${({ theme }) => `${theme.text}`}; */
     color: ${allColors.color0};
     font-weight: 700;
     font-size: var(--font-xxl);
   }
 
   p {
-    /* color: ${({ theme }) => `${theme.text}`}; */
     color: ${allColors.color0};
     margin-top: 0.8rem;
     font-size: var(--font-sm);
@@ -75,10 +73,9 @@ export const ContentLeftAni = styled.div`
     padding: 0.5rem 1.8125rem;
 
     background: ${allColors.color3};
-    /* background: ${({ theme }) => `${theme.text}`}; */
     font-weight: 700;
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       bottom: 0;
     }
 

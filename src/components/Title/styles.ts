@@ -7,7 +7,7 @@ export const TitleContainer = styled.h2`
   width: fit-content;
 
   color: ${({ theme }) => theme.text};
-
+  text-align: center;
   padding-bottom: 0.625rem;
   margin: 0 auto;
 
