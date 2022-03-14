@@ -15,7 +15,7 @@ export const allColors = {
 
 export const lightTheme = {
   value: 'light',
-  body: allColors.color0,
+  body: allColors.color9,
   text: allColors.color7,
   switchToggle: allColors.color5,
   backgroundLinear: allColors.color2,
