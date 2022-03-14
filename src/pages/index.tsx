@@ -1,7 +1,18 @@
+//Components
+import { SectionHome } from '../components/SectionHome';
+import { SectionHowItWorks } from '../components/SectionHowItWorks';
+import { SectionWhyConquerPage } from '../components/SectionWhyConquerPage';
+import { SectionDepositions } from '../components/SectionDepositions';
+
 export default function Home() {
   return (
-    <h1 style={{ paddingTop: '80px' }}>
-      Base Template for develop - Easy Page
-    </h1>
+    <>
+      <main>
+        <SectionHome />
+        <SectionHowItWorks />
+        <SectionWhyConquerPage />
+        <SectionDepositions />
+      </main>
+    </>
   );
 }
