@@ -104,7 +104,7 @@ export const ContentLeft = styled.div`
       width: 65%;
       height: 0.25rem;
 
-      background-color: ${({ theme }) => theme.text};
+      background-color: ${({ theme }) => theme.borderLine};
     }
   }
 
@@ -170,7 +170,7 @@ export const FormContactUs = styled.form`
 
     font-size: var(--font-xs);
 
-    background-color: ${({ theme }) => theme.backgroundButton};
+    background-color: #c34f16;
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
