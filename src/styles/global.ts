@@ -52,5 +52,4 @@ export const GlobalStyle = createGlobalStyle`
     --font-xl: clamp(1.5rem, 2vw, 1.75rem);
     --font-xxl: clamp(1.8rem, 3vw, 3rem);
   }
-
 `;

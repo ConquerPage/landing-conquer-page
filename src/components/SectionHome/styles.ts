@@ -8,8 +8,6 @@ export const bounce = keyframes`0%{transform: translate(-50%,0);}
 export const SectionContainer = styled.section`
   position: relative;
   background: ${({ theme }) =>
-    `linear-gradient(118.9deg, ${theme.backgroundLinear} 42.38%, ${theme.secondBackgroundLinear} 99.99%, rgba(174, 141, 138, 0) 100%);`};
-  background: ${({ theme }) =>
     `linear-gradient(101.45deg, ${theme.backgroundLinear} 0%, ${theme.secondBackgroundLinear} 177.62%);`};
   padding: 7rem 1rem 9.5rem 1rem;
   
@@ -68,6 +66,9 @@ export const ContentLeftAni = styled.div`
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 18.75rem;
     position: absolute;
     bottom: -70px;
 
@@ -79,21 +80,14 @@ export const ContentLeftAni = styled.div`
     @media (min-width: 992px) {
       bottom: 0;
     }
-
-    #first-text-button,
-    #second-text-button,
-    #second-text-button-color {
-      font-size: var(--font-xs);
-    }
-
+    
     #first-text-button {
       color: ${allColors.color9};
+      font-size: var(--font-md);
     }
     #second-text-button {
       color: ${allColors.color9};
-    }
-    #second-text-button-color {
-      color: ${allColors.color2};
+      font-size: var(--font-xs);
     }
   }
 
