@@ -7,10 +7,11 @@ export const bounce = keyframes`0%{transform: translate(-50%,0);}
 
 export const SectionContainer = styled.section`
   position: relative;
+
   background: ${({ theme }) =>
     `linear-gradient(101.45deg, ${theme.backgroundLinear} 0%, ${theme.secondBackgroundLinear} 177.62%);`};
   padding: 7rem 1rem 9.5rem 1rem;
-  
+
   @media (min-width: 768px) {
     padding: 9.5rem 1rem;
   }
