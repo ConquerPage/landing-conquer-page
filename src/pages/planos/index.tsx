@@ -1,5 +1,5 @@
 //Components
-import Footer from '../../components/Footer';
+import { Footer } from '../../components/Footer';
 import SectionPrices from './components/SectionPrices';
 import { SectionSatisfaction } from './components/SectionSatisfaction';
 
@@ -8,7 +8,7 @@ export default function Planos() {
     <main>
       <SectionPrices />
       <SectionSatisfaction />
-      <Footer />
+      <Footer showCTA={false} />
     </main>
   );
 }

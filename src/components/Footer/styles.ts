@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 import { allColors } from '../../styles/themes';
 
 export const MyFooter = styled.footer`
-  background: ${({ theme }) =>
-    `linear-gradient(101.45deg, ${theme.backgroundLinear} 0%, ${theme.secondBackgroundLinear} 177.62%);`};
+  background: ${({ theme, showCTA }) =>
+    showCTA ? `linear-gradient(101.45deg, ${theme.backgroundLinear} 0%, ${theme.secondBackgroundLinear} 177.62%);` : 'transparent'};
 
   padding: 2rem 1rem;
 
   @media (min-width: 768px) {
-    padding: 3rem 1rem;
+    padding: 1rem 1rem;
   }
 `;
 
@@ -22,11 +22,13 @@ export const Wrapper = styled.div`
   margin: 0 auto;
   gap: 3.2rem;
 `;
+
 export const ContentInfo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.875rem;
+  margin-top: 2rem;
 
   > p {
     text-align: center;
@@ -75,6 +77,7 @@ export const ContentList = styled(motion.nav)`
   > span {
     font-size: 1.5rem;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: ${({ theme, showCTA }) => showCTA ? allColors.color9 : theme.text};
   }
 `;
 
@@ -107,7 +110,7 @@ export const NavItemAni = styled(motion.li)`
     position: relative;
 
     text-decoration: none;
-    color: ${allColors.color0};
+    color: ${({ theme, showCTA }) => showCTA ? allColors.color9 : theme.text};
     font-size: var(--font-sm);
 
     font-weight: 700;
