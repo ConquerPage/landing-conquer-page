@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Image from 'next/image';
-import imageSectionHowItWorks from '../../../public/images/imageSectionHowItWorks.svg';
+import imageSectionHowItWorks from '../../../public/images/imageSectionHowItWorks.png';
 import { Title } from '../Title';
 
 import {

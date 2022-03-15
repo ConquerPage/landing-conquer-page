@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     background: ${({ theme }) => theme.body};
-    color: ${allColors.color0};
+    color: ${({ theme }) => theme.text};
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
