@@ -103,7 +103,7 @@ export default function FaleConosco() {
         variants={headerVariants}
       >
         <Link href="/">
-          <a>
+          <a aria-label='retornar'>
             <FontAwesomeIcon icon={faArrowLeft} />
           </a>
         </Link>
