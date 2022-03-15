@@ -67,6 +67,9 @@ export const ContentLeftAni = styled.div`
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 18.75rem;
     position: absolute;
     bottom: -70px;
 
@@ -78,21 +81,14 @@ export const ContentLeftAni = styled.div`
     @media (min-width: 992px) {
       bottom: 0;
     }
-
-    #first-text-button,
-    #second-text-button,
-    #second-text-button-color {
-      font-size: var(--font-xs);
-    }
-
+    
     #first-text-button {
       color: ${allColors.color9};
+      font-size: var(--font-md);
     }
     #second-text-button {
       color: ${allColors.color9};
-    }
-    #second-text-button-color {
-      color: ${allColors.color2};
+      font-size: var(--font-xs);
     }
   }
 

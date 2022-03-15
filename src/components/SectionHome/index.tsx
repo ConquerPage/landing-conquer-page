@@ -19,7 +19,7 @@ export function SectionHome() {
 
           <Link href="/planos" passHref>
             <a>
-              <span id="first-text-button">QUERO MELHORAR MINHAS VENDAS</span>
+              <span id="first-text-button">Quero vender mais</span>
               <span id="second-text-button">
                 COMECE GRÁTIS
               </span>
