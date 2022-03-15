@@ -1,6 +1,11 @@
-//Styles
 import Link from 'next/link';
 import { config } from '../Header/content';
+
+interface IFooterProps {
+  showCTA: boolean;
+}
+
+//Styles
 import {
   MyFooter,
   Wrapper,
@@ -10,7 +15,7 @@ import {
   NavItemAni,
 } from './styles';
 
-export function Footer() {
+export function Footer({ showCTA = true }: IFooterProps) {
   const wrapperVariants = {
     hidden: {
       opacity: 0,
@@ -41,30 +46,37 @@ export function Footer() {
   };
 
   return (
-    <MyFooter>
+    <MyFooter showCTA={showCTA}>
       <Wrapper>
-        <ContentInfo>
-          <h2>Chegou até aqui e ainda está com dúvida ?</h2>
-          <p>
-            Com a <strong>ConquerPage</strong> você vai ter do seu lado o{' '}
-            <strong>MELHOR</strong> que a tecnologia pode oferecer para você{' '}
-            <strong>conquistar mais clientes e alavancar as suas vendas</strong>
-            , não perca tempo!! Clica no botão abaixo para conhecer nossos
-            planos e começar a{' '}
-            <strong>transformar de vez os seus resultados</strong>.
-          </p>
-          <Link href="/planos" passHref>
-            <a>
-              <span id="first-text-button">Quero alavancar minhas vendas</span>
-              <span id="second-text-button">Você pode começar de GRAÇA</span>
-            </a>
-          </Link>
-        </ContentInfo>
+        {showCTA && (
+          <ContentInfo>
+            <h2>Chegou até aqui e ainda está com dúvida ?</h2>
+            <p>
+              Com a <strong>ConquerPage</strong> você vai ter do seu lado o{' '}
+              <strong>MELHOR</strong> que a tecnologia pode oferecer para você{' '}
+              <strong>
+                conquistar mais clientes e alavancar as suas vendas
+              </strong>
+              , não perca tempo!! Clica no botão abaixo para conhecer nossos
+              planos e começar a{' '}
+              <strong>transformar de vez os seus resultados</strong>.
+            </p>
+            <Link href="/planos" passHref>
+              <a>
+                <span id="first-text-button">
+                  Quero alavancar minhas vendas
+                </span>
+                <span id="second-text-button">Você pode começar de GRAÇA</span>
+              </a>
+            </Link>
+          </ContentInfo>
+        )}
         <ContentList
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.1 }}
           variants={wrapperVariants}
+          showCTA={showCTA}
         >
           <span>
             Conquer<strong>Page</strong>
@@ -75,6 +87,7 @@ export function Footer() {
                 variants={liVariants}
                 transition={{ duration: 0.4 }}
                 key={i.url}
+                showCTA={showCTA}
               >
                 <Link href={i.url}>
                   <a>{i.title}</a>
