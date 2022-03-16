@@ -1,7 +1,7 @@
-import { useMemo } from 'react';
+import { useMemo, useEffect } from 'react';
 import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
-
+import * as gtag from '../lib/gtag';
 //SEO
 import { DefaultSeo } from 'next-seo';
 import { SEO } from '../../next-seo-config';
@@ -12,6 +12,7 @@ import { useMediaQuery } from '../hooks/useMediaQuery';
 //Components
 import { HeaderResponsive } from '../components/HeaderResponsive';
 import { Header } from '../components/Header';
+import Analytics from '../components/Analytics';
 
 //Global styles
 import { GlobalStyle } from '../styles/global';
@@ -27,6 +28,16 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const router = useRouter();
 
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
+
   const hiddenHeaderIn = useMemo(() => ['/fale-conosco'], []);
 
   return (
@@ -41,6 +52,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <HeaderResponsive handleToogleTheme={toggleTheme} />
           ))}
         <Component {...pageProps} />
+        <Analytics />
       </ThemeProvider>
     </>
   );
