@@ -16,7 +16,7 @@ import {
 
 export function SectionHowItWorks() {
   return (
-    <Section>
+    <Section id="como-funciona">
       <ContentTitle>
         <Title value="Sua página vendedora online em poucos minutos" />
       </ContentTitle>
