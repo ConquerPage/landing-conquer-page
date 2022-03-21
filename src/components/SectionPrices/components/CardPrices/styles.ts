@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
-import { allColors } from '../../../../../../styles/themes';
+import { allColors } from '../../../../styles/themes';
 
 export const CardsContainerAni = styled(motion.div)`
   width: 100%;

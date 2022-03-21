@@ -4,7 +4,9 @@ import { allColors } from '../../styles/themes';
 
 export const MyFooter = styled.footer`
   background: ${({ theme, showCTA }) =>
-    showCTA ? `linear-gradient(101.45deg, ${theme.backgroundLinear} 0%, ${theme.secondBackgroundLinear} 177.62%);` : 'transparent'};
+    showCTA
+      ? `linear-gradient(101.45deg, ${theme.backgroundLinear} 0%, ${theme.secondBackgroundLinear} 177.62%);`
+      : 'transparent'};
 
   padding: 2rem 1rem;
 
@@ -48,7 +50,7 @@ export const ContentInfo = styled.div`
 
     background: ${allColors.color3};
     font-weight: 700;
-    
+
     #first-text-button {
       color: ${allColors.color9};
       font-size: var(--font-lg);
@@ -68,7 +70,7 @@ export const ContentList = styled(motion.nav)`
   justify-content: space-between;
   flex-direction: column;
   gap: 20px;
-  
+
   @media (min-width: 992px) {
     flex-direction: row;
     gap: 0;
@@ -77,7 +79,7 @@ export const ContentList = styled(motion.nav)`
   > span {
     font-size: 1.5rem;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    color: ${({ theme, showCTA }) => showCTA ? allColors.color9 : theme.text};
+    color: ${({ theme, showCTA }) => (showCTA ? allColors.color9 : theme.text)};
   }
 `;
 
@@ -85,12 +87,12 @@ export const NavList = styled.ul`
   width: 100%;
   list-style: none;
   text-align: center;
-  
+
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 8px;
-  
+
   @media (min-width: 992px) {
     width: 80%;
     padding: 20px;
@@ -110,7 +112,7 @@ export const NavItemAni = styled(motion.li)`
     position: relative;
 
     text-decoration: none;
-    color: ${({ theme, showCTA }) => showCTA ? allColors.color9 : theme.text};
+    color: ${({ theme, showCTA }) => (showCTA ? allColors.color9 : theme.text)};
     font-size: var(--font-sm);
 
     font-weight: 700;
