@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import { allColors } from '../../styles/themes';
+import { allColors } from './themes';
 
 export const HeaderAni = styled(motion.header)`
   max-width: 1180px;

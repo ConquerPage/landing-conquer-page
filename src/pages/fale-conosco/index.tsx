@@ -19,7 +19,7 @@ import {
   ContentLeft,
   FormContactUs,
   ContentRight,
-} from './styles';
+} from '../../styles/fale-conosco.style';
 
 export default function FaleConosco() {
   const { theme } = useTheme();
@@ -103,7 +103,7 @@ export default function FaleConosco() {
         variants={headerVariants}
       >
         <Link href="/">
-          <a aria-label='retornar'>
+          <a aria-label="retornar">
             <FontAwesomeIcon icon={faArrowLeft} />
           </a>
         </Link>
