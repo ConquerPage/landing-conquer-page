@@ -4,6 +4,7 @@ import styled from 'styled-components';
 export const SectionContainer = styled.section`
   background-color: ${({ theme }) => theme.backgroundWhyConquerPage};
 
+  overflow-x: hidden;
   padding: 2.5rem 1rem;
 
   @media (min-width: 768px) {
