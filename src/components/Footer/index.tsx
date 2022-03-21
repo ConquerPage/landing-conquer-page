@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { config } from '../Header/content';
 
 interface IFooterProps {
-  showCTA: boolean;
+  showCTA?: boolean;
 }
 
 //Styles
