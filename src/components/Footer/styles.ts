@@ -32,8 +32,13 @@ export const ContentInfo = styled.div`
   gap: 1.875rem;
   margin-top: 2rem;
 
+  h2 {
+    color: ${allColors.color0};
+  }
+
   > p {
     text-align: center;
+    color: ${allColors.color0};
   }
 
   > a {
@@ -45,6 +50,7 @@ export const ContentInfo = styled.div`
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: ${allColors.color0};
 
     padding: 0.5rem 1.8125rem;
 

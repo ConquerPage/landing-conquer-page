@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import { allColors } from '../../styles/themes';
 
 export const SectionContainer = styled.section`
   width: 100%;
@@ -19,10 +20,12 @@ export const SectionHeaderAni = styled(motion.div)`
     width: 100%;
     text-align: center;
     font-size: var(--font-xxl);
+    color: ${allColors.color0};
   }
 
   > span {
     width: 100%;
+    color: ${allColors.color0};
 
     display: inline-block;
     text-align: center;

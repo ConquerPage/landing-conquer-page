@@ -26,6 +26,7 @@ export const HeaderContentAni = styled(motion.nav)`
   padding: 0 1rem;
 
   > span {
+    color: ${allColors.color0};
     font-size: 1.5rem;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
