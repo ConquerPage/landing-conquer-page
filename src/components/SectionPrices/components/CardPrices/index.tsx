@@ -1,6 +1,7 @@
 //Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faDollarSign } from '@fortawesome/free-solid-svg-icons';
+import * as gtag from '../../../../lib/gtag';
 
 //Styles
 import {
@@ -16,7 +17,21 @@ import {
   CardsContentRight,
 } from './styles';
 
+interface IButtonProps {
+  selectedPlan: number;
+  pricePlan: number | string;
+}
+
 export default function CardPrices() {
+  const contractPlan = ({ selectedPlan, pricePlan }: IButtonProps) => {
+    gtag.event({
+      action: 'contract_plan',
+      category: 'conversion',
+      label: `plan-${selectedPlan}`,
+      value: `price-R$${pricePlan}`,
+    });
+  };
+
   const cardsContentLeft = [
     {
       id: 1,
@@ -130,7 +145,14 @@ export default function CardPrices() {
               ))}
             </DescriptionList>
 
-            <CardButton>
+            <CardButton
+              onClick={() =>
+                contractPlan({
+                  selectedPlan: card.id,
+                  pricePlan: card.id === 1 ? 0 : 35,
+                })
+              }
+            >
               <span>Contratar Plano</span>
             </CardButton>
           </CardContentAni>
@@ -172,7 +194,14 @@ export default function CardPrices() {
               ))}
             </DescriptionList>
 
-            <CardButton>
+            <CardButton
+              onClick={() =>
+                contractPlan({
+                  selectedPlan: card.id,
+                  pricePlan: card.id === 3 ? 82 : '--',
+                })
+              }
+            >
               <span>Contratar Plano</span>
             </CardButton>
           </CardContentAni>
