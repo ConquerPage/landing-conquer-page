@@ -1,7 +1,7 @@
 //Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faDollarSign } from '@fortawesome/free-solid-svg-icons';
-import * as gtag from '../../../../../../lib/gtag';
+import * as gtag from '../../../../lib/gtag';
 
 //Styles
 import {
