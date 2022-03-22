@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { config } from '../Header/content';
 
 interface IFooterProps {
-  showCTA: boolean;
+  ShowCTA?: boolean;
 }
 
 //Styles
@@ -15,7 +15,7 @@ import {
   NavItemAni,
 } from './styles';
 
-export function Footer({ showCTA = true }: IFooterProps) {
+export function Footer({ ShowCTA = true }: IFooterProps) {
   const wrapperVariants = {
     hidden: {
       opacity: 0,
@@ -46,9 +46,9 @@ export function Footer({ showCTA = true }: IFooterProps) {
   };
 
   return (
-    <MyFooter showCTA={showCTA}>
+    <MyFooter showCTA={ShowCTA}>
       <Wrapper>
-        {showCTA && (
+        {ShowCTA && (
           <ContentInfo>
             <h2>Chegou até aqui e ainda está com dúvida ?</h2>
             <p>
@@ -76,7 +76,7 @@ export function Footer({ showCTA = true }: IFooterProps) {
           whileInView="visible"
           viewport={{ once: false, amount: 0.1 }}
           variants={wrapperVariants}
-          showCTA={showCTA}
+          showCTA={ShowCTA}
         >
           <span>
             Conquer<strong>Page</strong>
@@ -87,7 +87,7 @@ export function Footer({ showCTA = true }: IFooterProps) {
                 variants={liVariants}
                 transition={{ duration: 0.4 }}
                 key={i.url}
-                showCTA={showCTA}
+                showCTA={ShowCTA}
               >
                 <Link href={i.url}>
                   <a>{i.title}</a>

@@ -170,7 +170,7 @@ export function CardResponsive() {
               <Point key={c.name} currentCard={currentPage === ind} />
             ))}
           </SliderPoints>
-        </CardAni> 
+        </CardAni>
       </AnimatePresence>
 
       {currentPage !== 0 && (
