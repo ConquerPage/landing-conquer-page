@@ -6,6 +6,8 @@ export const SectionContainer = styled.section`
 
   padding: 2.5rem 1rem;
 
+  overflow-x: hidden;
+
   @media (min-width: 768px) {
     padding: 6.25rem 1rem;
   }
