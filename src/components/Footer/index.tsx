@@ -78,9 +78,14 @@ export function Footer({ ShowCTA = true }: IFooterProps) {
           variants={wrapperVariants}
           showCTA={ShowCTA}
         >
-          <span>
-            Conquer<strong>Page</strong>
-          </span>
+          <Link href="/">
+            <a aria-label="retornar">
+              <span>
+                Conquer<strong>Page</strong>
+              </span>
+            </a>
+          </Link>
+
           <NavList>
             {config.content.map((i) => (
               <NavItemAni
