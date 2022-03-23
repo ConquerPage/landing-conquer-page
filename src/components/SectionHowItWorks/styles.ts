@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const Section = styled.section`
@@ -5,6 +6,8 @@ export const Section = styled.section`
   flex-direction: column;
   padding: 2.5rem 1rem;
 `;
+
+export const ContentAni = styled(motion.div)``;
 
 export const Content = styled.div`
   width: 100%;
