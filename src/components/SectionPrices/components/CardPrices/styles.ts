@@ -77,6 +77,27 @@ export const CardContentAni = styled(motion.div)`
 
   padding: 1rem;
 
+  > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-color: ${({ theme }) => theme.cardButtonColor};
+    border: none;
+    text-decoration: none;
+    width: 65%;
+    height: 2.5rem;
+    border-radius: 5px;
+    margin: 2.625rem auto;
+
+    > span {
+      color: ${({ theme }) => theme.cardButtonTextColor};
+      font-size: var(--font-xs);
+      font-weight: 700;
+    }
+  }
+
   > h2 {
     color: ${({ theme }) => theme.cardTextColor};
     font-size: var(--font-xl);
@@ -143,7 +164,7 @@ export const DescriptionItem = styled.li`
   }
 `;
 
-export const CardButton = styled.button`
+export const CardButton = styled.a`
   background-color: ${({ theme }) => theme.cardButtonColor};
   border: none;
   width: 65%;
