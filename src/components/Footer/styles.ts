@@ -1,74 +1,130 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { allColors } from '../../styles/themes';
 
-export const Content = styled.div`
+export const MyFooter = styled.footer`
+  background: ${({ theme, showCTA }) =>
+    showCTA
+      ? `linear-gradient(101.45deg, ${theme.backgroundLinear} 0%, ${theme.secondBackgroundLinear} 177.62%);`
+      : 'transparent'};
+
+  padding: 2rem 1rem;
+
+  @media (min-width: 768px) {
+    padding: 1rem 1rem;
+  }
+`;
+
+export const Wrapper = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  padding: 0rem 1rem 2rem 1rem;
+  width: 100%;
 
   max-width: 1180px;
   margin: 0 auto;
+  gap: 3.2rem;
+`;
 
-  #title {
-    font-size: 17.4554px;
-    line-height: 26px;
-    color: ${({ theme }) => theme.text};
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-bottom: 20px;
+export const ContentInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.875rem;
+  margin-top: 2rem;
+
+  h2 {
+    color: ${allColors.color0};
   }
 
-  @media (min-width: 576px) {
+  > p {
+    text-align: center;
+    color: ${allColors.color0};
+  }
+
+  > a {
+    text-decoration: none;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: ${allColors.color0};
 
-    #title {
-      font-size: 21px;
-      margin-bottom: 0px;
+    padding: 0.5rem 1.8125rem;
+
+    background: ${allColors.color3};
+    font-weight: 700;
+
+    #first-text-button {
+      color: ${allColors.color9};
+      font-size: var(--font-lg);
     }
-  }
-  @media (min-width: 992px) {
-    #title {
-      font-size: 21px;
-      margin-bottom: 0px;
+    #second-text-button {
+      color: ${allColors.color9};
+      font-size: var(--font-sm);
     }
   }
 `;
 
-export const FooterContent = styled.footer`
+export const ContentList = styled(motion.nav)`
+  position: relative;
+
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  gap: 0px 10px;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
 
-  a {
-    font-size: max(1rem, 0.8vw);
+  @media (min-width: 992px) {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  > a {
     text-decoration: none;
-    color: ${({ theme }) => theme.text};
-
-    :hover {
-      font-weight: bold;
+    > span {
+      font-size: 1.5rem;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      color: ${({ theme, showCTA }) =>
+        showCTA ? allColors.color9 : theme.text};
     }
   }
+`;
 
-  @media (min-width: 576px) {
-    a {
-      & + a {
-        margin-left: 10px;
-      }
-    }
-  }
+export const NavList = styled.ul`
+  width: 100%;
+  list-style: none;
+  text-align: center;
 
-  @media (min-width: 1200px) {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+
+  @media (min-width: 992px) {
+    width: 80%;
+    padding: 20px;
     justify-content: flex-end;
+    flex-direction: row;
+  }
+`;
 
-    a {
-      & + a {
-        margin-left: 40px;
-      }
-    }
+export const NavItemAni = styled(motion.li)`
+  width: 100%;
+
+  @media (min-width: 992px) {
+    width: 15%;
+  }
+
+  > a {
+    position: relative;
+
+    text-decoration: none;
+    color: ${({ theme, showCTA }) => (showCTA ? allColors.color9 : theme.text)};
+    font-size: var(--font-sm);
+
+    font-weight: 700;
   }
 `;

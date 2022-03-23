@@ -52,7 +52,7 @@ export function SectionWhyConquerPage() {
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.9,
+        duration: 0.5,
         staggerChildren: 0.4,
         delayChildren: 0.5,
       },
@@ -76,7 +76,7 @@ export function SectionWhyConquerPage() {
                 x: 0,
                 transition: {
                   type: 'spring',
-                  duration: 1,
+                  duration: 0.5,
                   bounce: 0.2,
                 },
               },

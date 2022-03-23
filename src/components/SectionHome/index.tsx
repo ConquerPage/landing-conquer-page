@@ -19,7 +19,7 @@ export function SectionHome() {
 
           <Link href="/planos" passHref>
             <a>
-              <span id="first-text-button">QUERO MELHORAR MINHAS VENDAS</span>
+              <span id="first-text-button">Quero vender mais</span>
               <span id="second-text-button">
                 COMECE GRÁTIS
               </span>
@@ -30,7 +30,7 @@ export function SectionHome() {
           <Image src={BannerHome} alt="Crie páginas de alta conversão" width={0} height={0} layout="responsive" priority />
         </ContentRightAni>
       </ContentAni>
-      <Link href="#conheca" passHref aria-label="conheca">
+      <Link href="#como-funciona" passHref aria-label="Como funciona">
         <ButtonRedirectSection aria-label="conheca">
           <FontAwesomeIcon icon={faArrowDown} />
         </ButtonRedirectSection>

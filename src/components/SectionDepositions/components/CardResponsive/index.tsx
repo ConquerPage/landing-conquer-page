@@ -28,21 +28,21 @@ export function CardResponsive() {
   const cardsContent = useMemo(
     () => [
       {
-        name: 'Lucas Souza',
-        profession: 'Advogado Previdenciarista',
+        name: 'Pedro Henrique',
+        profession: 'Advogado',
         testimonial:
           'Nunca tive muita ligação com tecnologia, eu pensava que teria uma barreira enorme para criar uma página de captura pro meu negócio, quando vi a ConquerPage foi um alívio, fiz em 30 minutos uma página que eu pagava caro pra terceiros fazerem por mim, Obrigado!',
         avatar: '/images/avatar1.svg',
       },
       {
-        name: 'Mônica Aguiar',
-        profession: 'Professora de Gastronomia',
+        name: 'Monyse Ellen',
+        profession: 'Marketing Digital',
         testimonial:
           'Sou nova nesse mundo, então tive que pesquisar bastante plataformas pra criar minha página, procurei um profissional de tecnologia, porém os preços foram muito altos, até que achei vocês, e tudo fluiu bem, sozinha consegui criar minha página e deu tudo certo, fiz meu primeiro lançamento com ótimos resultados.',
         avatar: '/images/avatar2.svg',
       },
       {
-        name: 'Luiz Silva',
+        name: 'Lucas Nobre',
         profession: 'Corretor de Imóveis',
         testimonial:
           'Sempre tive problema em entender o que é domínio, hospedagem, código de programação, e já trabalho com digital a alguns anos, e agora conheci a ConquerPage, onde eu só preciso pegar designs prontos e customizar com a minha identidade visual, e fazer meus textos. Parabéns pelo trabalho incrível!!',
@@ -170,7 +170,7 @@ export function CardResponsive() {
               <Point key={c.name} currentCard={currentPage === ind} />
             ))}
           </SliderPoints>
-        </CardAni> 
+        </CardAni>
       </AnimatePresence>
 
       {currentPage !== 0 && (

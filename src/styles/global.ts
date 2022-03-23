@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     background: ${({ theme }) => theme.body};
-    color: ${allColors.color0};
+    color: ${({ theme }) => theme.text};
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
@@ -52,5 +52,4 @@ export const GlobalStyle = createGlobalStyle`
     --font-xl: clamp(1.5rem, 2vw, 1.75rem);
     --font-xxl: clamp(1.8rem, 3vw, 3rem);
   }
-
 `;

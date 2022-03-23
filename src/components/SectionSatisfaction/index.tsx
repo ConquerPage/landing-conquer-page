@@ -1,7 +1,7 @@
 import { SectionContainerAni, Content, ContentText } from './styles';
 
 import Image from 'next/image';
-import { useMediaQuery } from '../../../../hooks/useMediaQuery';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 
 export function SectionSatisfaction() {
   const isDesktop = useMediaQuery('(min-width: 992px)');

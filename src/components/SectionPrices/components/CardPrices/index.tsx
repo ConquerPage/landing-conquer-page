@@ -11,12 +11,21 @@ import {
   CardSubtitle,
   DescriptionList,
   DescriptionItem,
-  CardButton,
   CardsContentLeft,
   CardsContentRight,
 } from './styles';
+import Link from 'next/link';
 
 export default function CardPrices() {
+  // const contractPlan = ({ selectedPlan, pricePlan }: IButtonProps) => {
+  //   gtag.event({
+  //     action: 'contract_plan',
+  //     category: 'conversion',
+  //     label: `plan-${selectedPlan}`,
+  //     value: `price-R$${pricePlan}`,
+  //   });
+  // };
+
   const cardsContentLeft = [
     {
       id: 1,
@@ -130,9 +139,11 @@ export default function CardPrices() {
               ))}
             </DescriptionList>
 
-            <CardButton>
-              <span>Contratar Plano</span>
-            </CardButton>
+            <Link href="/fale-conosco" passHref>
+              <a>
+                <span>Contratar Plano</span>
+              </a>
+            </Link>
           </CardContentAni>
         ))}
       </CardsContentLeft>
@@ -172,9 +183,11 @@ export default function CardPrices() {
               ))}
             </DescriptionList>
 
-            <CardButton>
-              <span>Contratar Plano</span>
-            </CardButton>
+            <Link href="/fale-conosco" passHref>
+              <a>
+                <span>Contratar Plano</span>
+              </a>
+            </Link>
           </CardContentAni>
         ))}
       </CardsContentRight>
