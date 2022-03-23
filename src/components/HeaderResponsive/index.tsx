@@ -85,9 +85,14 @@ export function HeaderResponsive({
         viewport={{ once: false, amount: 0.1 }}
         variants={headerVariants}
       >
-        <span>
-          Conquer<strong>Page</strong>
-        </span>
+        <Link href="/">
+          <a aria-label="retornar">
+            <span>
+              Conquer<strong>Page</strong>
+            </span>
+          </a>
+        </Link>
+
         <MenuToggle
           handleShowMenu={() => setShowMenuResponsive()}
           showMenu={showMenuResponsive}
