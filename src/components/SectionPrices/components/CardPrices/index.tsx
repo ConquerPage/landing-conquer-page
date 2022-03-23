@@ -1,7 +1,6 @@
 //Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faDollarSign } from '@fortawesome/free-solid-svg-icons';
-import * as gtag from '../../../../lib/gtag';
 
 //Styles
 import {
@@ -12,25 +11,20 @@ import {
   CardSubtitle,
   DescriptionList,
   DescriptionItem,
-  CardButton,
   CardsContentLeft,
   CardsContentRight,
 } from './styles';
-
-interface IButtonProps {
-  selectedPlan: number;
-  pricePlan: number | string;
-}
+import Link from 'next/link';
 
 export default function CardPrices() {
-  const contractPlan = ({ selectedPlan, pricePlan }: IButtonProps) => {
-    gtag.event({
-      action: 'contract_plan',
-      category: 'conversion',
-      label: `plan-${selectedPlan}`,
-      value: `price-R$${pricePlan}`,
-    });
-  };
+  // const contractPlan = ({ selectedPlan, pricePlan }: IButtonProps) => {
+  //   gtag.event({
+  //     action: 'contract_plan',
+  //     category: 'conversion',
+  //     label: `plan-${selectedPlan}`,
+  //     value: `price-R$${pricePlan}`,
+  //   });
+  // };
 
   const cardsContentLeft = [
     {
@@ -145,16 +139,11 @@ export default function CardPrices() {
               ))}
             </DescriptionList>
 
-            <CardButton
-              onClick={() =>
-                contractPlan({
-                  selectedPlan: card.id,
-                  pricePlan: card.id === 1 ? 0 : 35,
-                })
-              }
-            >
-              <span>Contratar Plano</span>
-            </CardButton>
+            <Link href="/fale-conosco" passHref>
+              <a>
+                <span>Contratar Plano</span>
+              </a>
+            </Link>
           </CardContentAni>
         ))}
       </CardsContentLeft>
@@ -194,16 +183,11 @@ export default function CardPrices() {
               ))}
             </DescriptionList>
 
-            <CardButton
-              onClick={() =>
-                contractPlan({
-                  selectedPlan: card.id,
-                  pricePlan: card.id === 3 ? 82 : '--',
-                })
-              }
-            >
-              <span>Contratar Plano</span>
-            </CardButton>
+            <Link href="/fale-conosco" passHref>
+              <a>
+                <span>Contratar Plano</span>
+              </a>
+            </Link>
           </CardContentAni>
         ))}
       </CardsContentRight>
