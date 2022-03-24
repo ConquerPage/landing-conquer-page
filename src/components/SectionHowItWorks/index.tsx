@@ -17,14 +17,14 @@ import {
 
 export function SectionHowItWorks() {
   return (
-    <Section id="como-funciona">
+    <Section id="conheca">
       <ContentAni
         initial="collapsed"
         whileInView="open"
         viewport={{ once: true, amount: 0.1 }}
         variants={{
-          open: { opacity: 1, transition: { duration: 1 }, scale: 1 },
-          collapsed: { opacity: 0, scale: 0 },
+          open: { opacity: 1, transition: { duration: 1 } },
+          collapsed: { opacity: 0 },
         }}
       >
         <ContentTitle>
