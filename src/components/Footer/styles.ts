@@ -34,6 +34,7 @@ export const ContentInfo = styled.div`
 
   h2 {
     color: ${allColors.color0};
+    text-align: center;
   }
 
   > p {
