@@ -35,6 +35,7 @@ export const ContentInfo = styled.div`
 
   h2 {
     color: ${allColors.color0};
+    text-align: center;
   }
 
   > p {
@@ -83,10 +84,14 @@ export const ContentList = styled(motion.nav)`
     gap: 0;
   }
 
-  > span {
-    font-size: 1.5rem;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    color: ${({ theme, showCTA }) => (showCTA ? allColors.color9 : theme.text)};
+  > a {
+    text-decoration: none;
+    > span {
+      font-size: 1.5rem;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      color: ${({ theme, showCTA }) =>
+        showCTA ? allColors.color9 : theme.text};
+    }
   }
 `;
 

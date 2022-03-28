@@ -5,9 +5,13 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   padding: 2.5rem 1rem;
+  overflow-x: hidden;
 `;
 
-export const ContentAni = styled(motion.div)``;
+export const ContentAni = styled(motion.div)`
+  width: 100%;
+  height: 100%;
+`;
 
 export const Content = styled.div`
   width: 100%;
