@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { allColors } from '../../styles/themes';
 
 export const MyFooter = styled.footer`
+  overflow: hidden;
   background: ${({ theme, showCTA }) =>
     showCTA
       ? `linear-gradient(101.45deg, ${theme.backgroundLinear} 0%, ${theme.secondBackgroundLinear} 177.62%);`
