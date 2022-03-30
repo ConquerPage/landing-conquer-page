@@ -9,6 +9,7 @@ import {
   OriginalPrice,
   DiscountPrice,
   CardSubtitle,
+  CardTitle,
   DescriptionList,
   DescriptionItem,
   CardsContentLeft,
@@ -70,17 +71,6 @@ export default function CardPrices() {
         'Acompanhamento de Métricas',
         'Integração com serviços de Emails',
         'Retirar "Feito com ConquerPage"',
-      ],
-    },
-    {
-      id: 4,
-      title: 'Customizado',
-      subtitle: 'Precisa de algo mais customizado ? entre em contato conosco.',
-      description: [
-        '?? Páginas',
-        '?? Domínio',
-        '?? visitas/mês',
-        'Certificado de Segurança (SSL)',
       ],
     },
   ];
@@ -172,8 +162,6 @@ export default function CardPrices() {
               </>
             )}
 
-            {card?.subtitle && <CardSubtitle>{card?.subtitle}</CardSubtitle>}
-
             <DescriptionList>
               {card.description.map((desc) => (
                 <DescriptionItem key={desc}>
@@ -190,6 +178,38 @@ export default function CardPrices() {
             </Link>
           </CardContentAni>
         ))}
+
+        <CardContentAni
+          variants={{
+            visible: {
+              opacity: 1,
+            },
+            hidden: {
+              opacity: 0,
+            },
+          }}
+        >
+          <h2>Custom</h2>
+          <FontAwesomeIcon icon={faDollarSign} />
+
+          <CardTitle>
+            Nenhum plano atendeu o que o seu negócio necessita no momento ?
+          </CardTitle>
+
+          <CardSubtitle>
+            Entre em contato com nossa equipe para montar seu plano totalmente
+            personalizado para o seu negócio, aqui você vai decidir quantos
+            domínios usar, quantas páginas disponíveis para criação, quantas
+            visitas seu site poderá ter mensalmente, entre outros serviços
+            personalizados
+          </CardSubtitle>
+
+          <Link href="/fale-conosco" passHref>
+            <a>
+              <span>Fale Conosco</span>
+            </a>
+          </Link>
+        </CardContentAni>
       </CardsContentRight>
     </CardsContainerAni>
   );

@@ -31,7 +31,11 @@ export default function SectionPrices() {
         variants={contentVariants}
       >
         <h1>Conheça nossos Planos</h1>
-        <span>Escolha o plano que mais se adeque a sua necessidade</span>
+        <span>
+          Chegou a hora de{' '}
+          <strong>levar suas vendas para o próximo nível</strong>, escolha o
+          melhor plano para o seu negócio!
+        </span>
       </SectionHeaderAni>
       <CardPrices />
     </SectionContainer>
