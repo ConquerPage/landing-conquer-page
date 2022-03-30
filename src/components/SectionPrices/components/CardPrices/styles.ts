@@ -36,7 +36,7 @@ export const CardsContentLeft = styled.div`
 
   @media (min-width: 576px) {
     width: 50%;
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 
   @media (min-width: 1200px) {
@@ -77,6 +77,10 @@ export const CardContentAni = styled(motion.div)`
 
   padding: 1rem;
 
+  @media (min-width: 1200px) {
+    height: 34.25rem;
+  }
+
   > a {
     display: flex;
     align-items: center;
@@ -89,7 +93,18 @@ export const CardContentAni = styled(motion.div)`
     width: 65%;
     height: 2.5rem;
     border-radius: 5px;
+
     margin: 2.625rem auto;
+
+    @media (min-width: 1200px) {
+      position: absolute;
+
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 40px;
+
+      margin: 2.625rem 0 0 0;
+    }
 
     > span {
       color: ${({ theme }) => theme.cardButtonTextColor};
@@ -137,13 +152,23 @@ export const DiscountPrice = styled.h3`
   font-size: var(--font-xl);
 `;
 
-export const CardSubtitle = styled.span`
+export const CardTitle = styled.h4`
   display: inline-block;
   color: ${({ theme }) => theme.cardTextColor};
   font-size: var(--font-sm);
 
   margin-top: 1.75rem;
   margin-bottom: 1.25rem;
+
+  text-align: center;
+`;
+
+export const CardSubtitle = styled.span`
+  display: inline-block;
+  color: ${({ theme }) => theme.cardTextColor};
+  font-size: var(--font-sm);
+
+  text-align: center;
 `;
 
 export const DescriptionList = styled.ul`
