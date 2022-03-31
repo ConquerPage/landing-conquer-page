@@ -133,7 +133,7 @@ export default function FaleConosco() {
 
             {sendedSuccess ? (
               <div>
-                <h4>Cadastro Enviado !</h4>
+                <h4>Cadastro Enviado!</h4>
                 <span>
                   Cadastro enviado com sucesso! Aguarde que nossa equipe irá
                   efetivar o seu cadastro.
@@ -203,7 +203,7 @@ export default function FaleConosco() {
                 {sendingEmail ? (
                   <FontAwesomeIcon icon={faSpinner} spin />
                 ) : (
-                  'Enviar'
+                  'Cadastrar'
                 )}
               </button>
             </FormContactUs>
