@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer';
 
 export default function sendEmail(req, res) {
-  const { nome, email, telefone } = req.body;
+  const { nome, email, telefone, idade, profissao } = req.body;
 
   const transporter = nodemailer.createTransport({
     port: 465,
@@ -21,6 +21,8 @@ export default function sendEmail(req, res) {
     Nome: ${nome},
     Email: ${email},
     Telefone: ${telefone}
+    Idade: ${idade}
+    Profissão: ${profissao}
     `,
   };
 
