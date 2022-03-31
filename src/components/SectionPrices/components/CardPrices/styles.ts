@@ -78,7 +78,7 @@ export const CardContentAni = styled(motion.div)`
   padding: 1rem;
 
   @media (min-width: 1200px) {
-    height: 34.25rem;
+    height: 38.25rem;
   }
 
   > a {
@@ -159,16 +159,12 @@ export const CardTitle = styled.h4`
 
   margin-top: 1.75rem;
   margin-bottom: 1.25rem;
-
-  text-align: center;
 `;
 
 export const CardSubtitle = styled.span`
   display: inline-block;
   color: ${({ theme }) => theme.cardTextColor};
   font-size: var(--font-sm);
-
-  text-align: center;
 `;
 
 export const DescriptionList = styled.ul`

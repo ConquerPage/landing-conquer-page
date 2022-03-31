@@ -25,8 +25,10 @@ export default function FaleConosco() {
   const { theme } = useTheme();
 
   const [name, setName] = useState('');
+  const [age, setAge] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [profession, setProfession] = useState('');
   const [sendingEmail, setSendingEmail] = useState(false);
   const [sendedSuccess, setSendedSuccess] = useState(false);
 
@@ -61,6 +63,8 @@ export default function FaleConosco() {
     const nome = event.target.nome.value;
     const email = event.target.email.value;
     const telefone = event.target.telefone.value;
+    const profissao = event.target.profissao.value;
+    const idade = event.target.idade.value;
 
     try {
       setSendingEmail(true);
@@ -72,6 +76,8 @@ export default function FaleConosco() {
           nome,
           email,
           telefone,
+          profissao,
+          idade,
         }),
       });
       setSendingEmail(false);
@@ -88,6 +94,8 @@ export default function FaleConosco() {
     return () => {
       setName('');
       setEmail('');
+      setAge('');
+      setProfession('');
       setPhone('');
       setSendingEmail(false);
       setSendedSuccess(false);
@@ -121,20 +129,21 @@ export default function FaleConosco() {
           variants={contentVariants}
         >
           <ContentLeft>
-            <h1>Fale Conosco</h1>
+            <h1>Cadastro</h1>
 
             {sendedSuccess ? (
               <div>
-                <h4>Mensagem Enviada !</h4>
+                <h4>Cadastro Enviado !</h4>
                 <span>
-                  Sua mensagem foi enviada com sucesso. Agradecemos seu
-                  feedback.
+                  Cadastro enviado com sucesso! Aguarde que nossa equipe irá
+                  efetivar o seu cadastro.
                 </span>
               </div>
             ) : (
               <p>
-                Gostou do que viu ? Não perca mais tempo, preencha o formuĺario
-                e garanta seu acesso.
+                Para prosseguir até a contratação do seu plano e para o uso do
+                construtor de páginas, é necessário que você preenche os dados
+                para cadastro.
               </p>
             )}
 
@@ -147,6 +156,16 @@ export default function FaleConosco() {
                 autoComplete="off"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                required
+              />
+              <Input
+                type="number"
+                id="idade"
+                name="Idade"
+                placeholder="Idade"
+                autoComplete="off"
+                value={age}
+                onChange={(e) => setAge(e.target.value)}
                 required
               />
               <Input
@@ -167,6 +186,16 @@ export default function FaleConosco() {
                 autoComplete="off"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
+                required
+              />
+              <Input
+                type="text"
+                id="profissao"
+                name="Profissão"
+                placeholder="Profissão"
+                autoComplete="off"
+                value={profession}
+                onChange={(e) => setProfession(e.target.value)}
                 required
               />
 
