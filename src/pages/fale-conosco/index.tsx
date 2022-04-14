@@ -83,9 +83,9 @@ export default function FaleConosco() {
       setSendingEmail(false);
       setSendedSuccess(true);
     } catch (error) {
+      alert('Erro ao Enviar Email');
       setSendingEmail(false);
       setSendedSuccess(false);
-      alert('Erro ao Enviar Email');
     }
   }, []);
 
