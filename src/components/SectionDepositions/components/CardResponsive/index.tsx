@@ -53,7 +53,7 @@ export function CardResponsive() {
         profession: 'Designer Gráfico',
         testimonial:
           'Comecei a ter muita demanda para criação de landing pages, e era bem dificil conciliar as coisas, porque outras ferramentas me consumiam muito tempo, um amigo me indicou e comecei a utilizar a ConquerPage, hoje consigo entregar a mesma qualidade de páginas, porém com muito mais facilidade em bem menos tempo.',
-        avatar: '/images/avatar4.svg',
+        avatar: '/images/avatar4.jpg',
       },
     ],
     [],
@@ -141,10 +141,16 @@ export function CardResponsive() {
             <div className="card__user">
               <div
                 className="card__avatar"
-                style={{ width: '80px', height: '80px' }}
+                style={{
+                  width: '80px',
+                  height: '80px',
+                  borderRadius: '50%',
+                  overflow: 'hidden',
+                }}
               >
                 <Image
                   src={cardsContent[currentPage].avatar}
+                  priority={true}
                   layout="fixed"
                   width={80}
                   height={80}

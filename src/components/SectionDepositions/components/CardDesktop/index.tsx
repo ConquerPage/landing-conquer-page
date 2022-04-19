@@ -33,7 +33,7 @@ export function CardDesktop() {
         profession: 'Designer Gráfico',
         testimonial:
           'Comecei a ter muita demanda para criação de landing pages, e era bem dificil conciliar as coisas, porque outras ferramentas me consumiam muito tempo, um amigo me indicou e comecei a utilizar a ConquerPage, hoje consigo entregar a mesma qualidade de páginas, porém com muito mais facilidade em bem menos tempo.',
-        avatar: '/images/avatar4.svg',
+        avatar: '/images/avatar4.jpg',
       },
     ],
     [],
@@ -87,7 +87,12 @@ export function CardDesktop() {
           <CardAni key={item.name} variants={cardsVariants} custom={direction}>
             <div
               className="card__avatar"
-              style={{ width: '90px', height: '90px' }}
+              style={{
+                width: '90px',
+                height: '90px',
+                borderRadius: '50%',
+                overflow: 'hidden',
+              }}
             >
               <Image
                 src={item.avatar}
@@ -95,6 +100,7 @@ export function CardDesktop() {
                 width={90}
                 height={90}
                 alt={item.name}
+                priority={true}
               />
             </div>
             <div className="card__wrapper">
