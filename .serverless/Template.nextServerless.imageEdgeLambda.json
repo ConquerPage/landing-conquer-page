@@ -1,5 +1,5 @@
 {
-  "name": "ivu8r7e-mm3n1vf",
+  "name": "joe9fm-gtmm0y2",
   "hash": "68bFHb9Ir9qedL8aoV+v4/ViYABYsOs5Wp1S6vzUTXw=",
   "description": "Image Lambda@Edge for Next CloudFront distribution",
   "memory": 512,
@@ -10,8 +10,8 @@
   "runtime": "nodejs14.x",
   "env": {},
   "role": {
-    "arn": "arn:aws:iam::391508336154:role/ivu8r7e-52ecj8d"
+    "arn": "arn:aws:iam::391508336154:role/joe9fm-ba2d2uc"
   },
-  "arn": "arn:aws:lambda:us-east-1:391508336154:function:ivu8r7e-mm3n1vf",
+  "arn": "arn:aws:lambda:us-east-1:391508336154:function:joe9fm-gtmm0y2",
   "region": "us-east-1"
 }

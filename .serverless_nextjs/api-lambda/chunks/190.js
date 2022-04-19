@@ -19,7 +19,7 @@ var react = __webpack_require__(7294);
 // EXTERNAL MODULE: ./node_modules/framesync/dist/es/index.mjs + 2 modules
 var es = __webpack_require__(4735);
 // EXTERNAL MODULE: ./node_modules/framer-motion/dist/es/utils/use-isomorphic-effect.mjs
-var use_isomorphic_effect = __webpack_require__(7207);
+var use_isomorphic_effect = __webpack_require__(8868);
 ;// CONCATENATED MODULE: ./node_modules/framer-motion/dist/es/utils/use-is-mounted.mjs
 
 
