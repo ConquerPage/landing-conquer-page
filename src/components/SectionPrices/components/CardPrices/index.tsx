@@ -134,7 +134,7 @@ export default function CardPrices() {
               ))}
             </DescriptionList>
 
-            <Link href="/fale-conosco" passHref>
+            <Link href="/cadastro" passHref>
               <a>
                 <span>Contratar Plano</span>
               </a>
@@ -176,7 +176,7 @@ export default function CardPrices() {
               ))}
             </DescriptionList>
 
-            <Link href="/fale-conosco" passHref>
+            <Link href="/cadastro" passHref>
               <a>
                 <span>Contratar Plano</span>
               </a>
@@ -209,7 +209,7 @@ export default function CardPrices() {
             personalizados
           </CardSubtitle>
 
-          <Link href="/fale-conosco" passHref>
+          <Link href="/cadastro" passHref>
             <a>
               <span>Fale Conosco</span>
             </a>
