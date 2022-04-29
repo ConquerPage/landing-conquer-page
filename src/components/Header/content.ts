@@ -17,13 +17,13 @@ export const config: IHeaderProps = {
       title: 'Depoimentos',
       url: '/#depoimentos',
     },
+    // {
+    //   title: 'Planos',
+    //   url: '/planos',
+    // },
     {
-      title: 'Planos',
-      url: '/planos',
-    },
-    {
-      title: 'Fale Conosco',
-      url: '/fale-conosco',
+      title: 'Cadastro',
+      url: '/cadastro',
     },
   ],
 };

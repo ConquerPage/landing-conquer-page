@@ -30,7 +30,7 @@ export function SectionHome() {
             </Link>
           </p>
 
-          <Link href="/planos" passHref>
+          <Link href="/cadastro" passHref>
             <a>
               <span id="first-text-button">Quero vender mais</span>
               <span id="second-text-button">COMECE GRÁTIS</span>
