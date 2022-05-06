@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     };
   }, [router.events]);
 
-  const hiddenHeaderIn = useMemo(() => ['/fale-conosco'], []);
+  const hiddenHeaderIn = useMemo(() => ['/cadastro'], []);
 
   return (
     <>

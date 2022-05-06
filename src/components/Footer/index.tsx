@@ -61,12 +61,12 @@ export function Footer({ ShowCTA = true }: IFooterProps) {
               planos e começar a{' '}
               <strong>transformar de vez os seus resultados</strong>.
             </p>
-            <Link href="/planos" passHref>
+            <Link href="/cadastro" passHref>
               <a>
                 <span id="first-text-button">
                   Quero alavancar minhas vendas
                 </span>
-                <span id="second-text-button">Você pode começar de GRAÇA</span>
+                <span id="second-text-button">Construtor de páginas gratuito</span>
               </a>
             </Link>
           </ContentInfo>
