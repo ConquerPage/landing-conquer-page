@@ -12,44 +12,44 @@ export function CommonQuestions() {
         id: 1,
         title: 'O que é a Conquer Page ?',
         description:
-          'Com um computador e uma conexão com internet, você consegue criar sua página de forma rápida e fácil, utilizando as diversas opções já prontas que entregamos para vocês, poupando dinheiro e dor de cabeça com a terceirização desse serviço.',
+          'A Conquer Page é uma plataforma que permite o usuário criar suas páginas web e publicá-las de forma rápida e estável, garantindo para os visitantes um sistema totalmente moderno e performático.',
       },
       {
         id: 2,
         title: 'Como funciona a Conquer Page ?',
         description:
-          'De acordo com o IBGE, o celular é o principal meio de acesso à internet do país, a pesquisa aponta que 98,1% dos brasileiros utilizam o celular para acessar internet, por isso a importância de ter uma página responsiva que se adeque a todo tipo de dispositivo.',
+          'Nossa plataforma é bem simples de ser utilizada, será disponibilizado diversos temas já prontos e testados, basta escolher o tema que mais gostou, personalizar ele do jeito que quiser, adicionando novas seções, substituindo seções por outras, alterando cores, textos, imagens, etc... Após a personalização, basta selecionar um domínio, seja ele externo ou interno e fazer a publicação da sua página.',
       },
       {
         id: 3,
         title: 'Como eu adquiro a ferramenta ?',
         description:
-          'Você já entrou em uma página lenta ? Que travava quando tinha muito acesso ? Nosso compromisso é com sua satisfação e também com a satisfação de seus visitantes, sua página além de possuir as melhores tecnologias, será entregue totalmente otimizada.',
+          'Nossa ferramenta é gratuita, basta fazer seu cadastro e fazer o uso do sistema.',
       },
       {
         id: 4,
         title: 'O que eu preciso instalar ?',
         description:
-          'Conjunto ideal de estratégias, design e facilidade para o seu negócio performar nas melhores condições possíveis. Oferecemos também as métricas necessários da sua página, para você medir o resultado de cada funil e campanha.',
+          'Não é necessário nenhuma instalação, nós prezamos justamente a facilidade e a praticidade pros nossos clientes, é só se cadastrar e começar a botar a mão na massa.',
       },
       {
         id: 5,
         title:
           'Preciso de conhecimentos com programação para usar a ferramenta ?',
         description:
-          'Conjunto ideal de estratégias, design e facilidade para o seu negócio performar nas melhores condições possíveis. Oferecemos também as métricas necessários da sua página, para você medir o resultado de cada funil e campanha.',
+          'Não é preciso nenhum tipo de conhecimento em programação para conseguir criar a página, a ferramente foi feita para qualquer pessoa conseguir usar, disponibilizamos um tutorial para não ficar nenhum dúvida em como fazer a utilização da ferramente!',
       },
       {
         id: 6,
         title: 'Vou conseguir usar o meu domínio próprio ?',
         description:
-          'Conjunto ideal de estratégias, design e facilidade para o seu negócio performar nas melhores condições possíveis. Oferecemos também as métricas necessários da sua página, para você medir o resultado de cada funil e campanha.',
+          'Sim, se você contratar um dos nossos planos você vai poder configurar domínios próprios. A quantidade de domínios varia de acordo com o plano contratado.',
       },
       {
         id: 7,
         title: 'Preciso de um servidor de hospedagem ?',
         description:
-          'Conjunto ideal de estratégias, design e facilidade para o seu negócio performar nas melhores condições possíveis. Oferecemos também as métricas necessários da sua página, para você medir o resultado de cada funil e campanha.',
+          'Não, utilizando nossos serviços sua única preocupação é configurar o conteúdo do seu site, nós cuidamos do restante. Seu site ficará distribuído em servidores do mundo todo o que significa que a latência será minima em qualquer lugar do mundo que seu site seja acessado.',
       },
     ];
   }, []);
